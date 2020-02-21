@@ -1,1 +1,23 @@
 // Mixins Here
+.bgimage(@url) {
+    background: url(@url) no-repeat center center;
+    background-size: cover;
+}
+
+.flex(@dir: row, @wrap: nowrap, @jc: center, @ai: center){
+    display: flex;
+    flex-flow: @dir @wrap;
+    justify-content: @jc;
+    align-items: @ai;
+}
+
+.btn(@bgcolor, @txtcolor:black) {
+    background-color: @bgcolor;
+    color: @txtcolor;
+    padding: 7px 0;
+    border-radius: 5px;
+
+    font-size: 1.7rem;
+
+    .flex();
+}
